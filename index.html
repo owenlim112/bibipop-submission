@@ -24,7 +24,7 @@
 #bibipop-demo .subscription-inspect > .subscription-item-nav button{font-size:15px;line-height:1.3;padding:11px 17px;min-height:46px}
 @media(max-width:600px){#bibipop-demo .subscription-inspect > .subscription-item-nav button{font-size:13px;padding:10px 13px;min-height:42px}}
 </style><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&family=Sniglet:wght@800&display=swap" rel="stylesheet"><link rel="icon" type="image/png" href="assets/04bedc74937c4d6bec5e.png"></head><body><div id="bibipop-demo"><svg width="0" height="0" aria-hidden="true" style="position:absolute"><defs><filter id="bp-edge-clean" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncA type="table" tableValues="0 0 .2 .7 1"/></feComponentTransfer></filter></defs></svg>
-<header><strong class="bp-logo" data-preserve-case><img class="bp-header-wordmark" src="assets/917c8cc4742b2453d92f.png" alt="Bibipop" width="1008" height="312"><img class="bp-header-mascot" src="assets/64ff1755262ad0ab3021.png" alt="" aria-hidden="true" width="630" height="598"></strong><span class="crumb" aria-live="polite">by Ang Bin Heng, Giselle Tan, Isabelle Tay, Owen Lim, Reimi Ho, Zhang Xintong</span><small class="capstone-credit">Our Capstone Project, With Love <span aria-hidden="true">&hearts;</span></small></header>
+<header><strong class="bp-logo" data-preserve-case><img class="bp-header-wordmark" src="assets/917c8cc4742b2453d92f.png" alt="Bibipop" width="1008" height="312"><span class="bp-bibi-chooser"><button class="bp-bibi-trigger" type="button" aria-expanded="false" aria-controls="bp-bibi-choices" aria-label="Choose Bibi Cursor Colour"><img class="bp-header-mascot" src="assets/49097bf78871de090f57.png" alt="" aria-hidden="true" width="176" height="176" draggable="false"></button><span class="bp-bibi-callout" aria-hidden="true"><span>Click Me!</span><svg viewBox="0 0 44 44" fill="none" aria-hidden="true"><path d="M4 33C16 35 30 29 33 19C35 12 33 6 29 3" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"/><path d="M22 10Q26 4 29 2Q33 4 36 8" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="bp-bibi-choices" id="bp-bibi-choices" role="group" aria-label="Choose a Bibi Cursor Colour" hidden></span><span class="bp-bibi-picker-status" role="status" aria-live="polite"></span></span></strong><span class="crumb" aria-live="polite">by Ang Bin Heng, Giselle Tan, Isabelle Tay, Owen Lim, Reimi Ho, Zhang Xintong</span><small class="capstone-credit">Our Capstone Project, With Love <span aria-hidden="true">&hearts;</span></small></header>
 <div class="stage"><div class="world"><svg class="world-trail" viewBox="0 0 1600 900" preserveAspectRatio="none" aria-hidden="true"><path d="M-80 670 C160 420 250 790 650 620 S1120 630 1670 450" fill="none" stroke="#e5cfb1" stroke-width="5" stroke-linecap="round" opacity=".45"/><path d="M600 -100 C710 180 1110 90 1350 310 S1530 600 1700 620" fill="none" stroke="#e3d8bf" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 14" opacity=".4"/></svg>
 <div class="intro"><span class="eyebrow">FROM INSIGHT TO EXPERIENCE</span><h1><span class="intro-line">A Little World.</span><span class="intro-line">A Bigger Idea.</span></h1><p>Meet the brand. Follow the thinking.<br>Step inside the experience.</p></div>
 <button class="object brand cursor-interaction" data-key="brand" type="button" aria-label="Enter the brand book"><img class="art brand-book-art" src="assets/fa019cf098b161cd36fa.png" alt="Bibipop ring-bound brand book with the official logo, Bibi mascot and pastel cover" width="1254" height="1254" draggable="false"><span class="label">01 / Meet Bibipop <span>↗</span></span></button>
@@ -1455,6 +1455,57 @@ html.bp-bibi-cursor-live,html.bp-bibi-cursor-live body,html.bp-bibi-cursor-live 
 @media(min-width:1000px){#bibipop-demo .world>.brand>.brand-book-art{height:240px}}
 @media(min-width:1000px) and (max-height:819px){#bibipop-demo .world>.brand>.brand-book-art{height:220px}}
 @media(max-width:620px){#bibipop-demo .world>.brand>.brand-book-art{height:150px}}
+
+/* Bibi's five official colourways, selected from the header. */
+@media (any-hover:hover) and (any-pointer:fine){html,body,body *{cursor:var(--bp-bibi-native,auto)!important}body :is(input:not([type=button]):not([type=submit]):not([type=reset]):not([type=range]):not([type=checkbox]):not([type=radio]),textarea,[contenteditable=true],[contenteditable=""]){cursor:text!important}body :is(:disabled,[aria-disabled=true]){cursor:not-allowed!important}}
+#bibipop-demo header .bp-cursor-picker{display:inline-flex;align-items:center;gap:5px;flex:0 0 auto;min-height:34px;padding:0 8px 0 4px;border:1px solid #31574433;border-radius:18px;background:var(--bibipop-cream);color:var(--bibipop-green);line-height:1.2;box-sizing:border-box}
+#bibipop-demo .bp-cursor-picker>img{display:block;flex:0 0 24px;width:24px;height:24px;object-fit:contain}
+#bibipop-demo .bp-cursor-label{font-size:11px;font-weight:900}
+#bibipop-demo .bp-cursor-picker select{width:86px;min-height:32px;padding:4px 2px;border:0;border-radius:8px;background:var(--bibipop-cream);color:var(--bibipop-green);font-size:12px;font-weight:700}
+#bibipop-demo .bp-cursor-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:900px){#bibipop-demo header .bp-cursor-picker{gap:2px;padding-right:5px}#bibipop-demo .bp-cursor-label{display:none}#bibipop-demo .bp-cursor-picker select{width:78px}}
+@media(max-width:620px){#bibipop-demo header .bp-cursor-picker{margin-left:auto;min-height:32px}#bibipop-demo .bp-cursor-picker select{font-size:12px;min-height:30px}}
+
+/* Keep the dropdown container; omit the extra selection outline. */
+#bibipop-demo header .bp-cursor-picker{border-color:#31574433;background:var(--bibipop-cream);box-shadow:none}
+#bibipop-demo .bp-cursor-picker select,#bibipop-demo .bp-cursor-picker select:focus,#bibipop-demo .bp-cursor-picker select:active{border:0;background:transparent;outline:none;box-shadow:none}
+#bibipop-demo .bp-cursor-picker select:focus-visible{outline:none;box-shadow:none;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:2px}
+
+/* Bibi beside the wordmark opens an image-only colour picker. */
+#bibipop-demo header .bp-logo{overflow:visible}
+#bibipop-demo .bp-bibi-chooser{position:relative;display:inline-flex;width:44px;height:44px;flex:0 0 44px;align-items:center;justify-content:center;line-height:1}
+#bibipop-demo .bp-bibi-trigger{display:flex;align-items:center;justify-content:center;width:44px;height:44px;flex:0 0 44px;padding:0;border:0;border-radius:50%;background:transparent;color:var(--bibipop-green);box-shadow:none;cursor:pointer}
+#bibipop-demo header .bp-logo .bp-header-mascot{display:block;width:44px;height:44px;object-fit:contain;transition:transform .2s ease-out}
+#bibipop-demo .bp-bibi-trigger:hover .bp-header-mascot{transform:translateY(-3px) rotate(5deg)}
+#bibipop-demo .bp-bibi-trigger:focus-visible{outline:2px dashed var(--bibipop-coral);outline-offset:3px}
+#bibipop-demo .bp-bibi-callout{position:absolute;top:calc(100% - 2px);right:4px;width:140px;height:60px;color:var(--bibipop-coral);pointer-events:none;transition:opacity .15s}
+#bibipop-demo .bp-bibi-callout>span{position:absolute;left:2px;top:28px;font:900 19px/1 'Nunito',sans-serif;letter-spacing:-.5px;white-space:nowrap;transform:rotate(-9deg)}
+#bibipop-demo .bp-bibi-callout svg{display:block;width:140px;height:60px;overflow:visible}
+#bibipop-demo .bp-bibi-chooser.is-open .bp-bibi-callout{opacity:0}
+#bibipop-demo .bp-bibi-choices{position:absolute;left:-148px;top:calc(100% + 10px);display:flex;align-items:center;gap:4px;width:max-content;padding:9px;border:1px solid #31574422;border-radius:24px;background:var(--bibipop-cream);box-shadow:0 9px 24px #31574417;z-index:12}
+#bibipop-demo .bp-bibi-choices[hidden]{display:none!important}
+#bibipop-demo .bp-bibi-choice{display:flex;width:44px;height:44px;align-items:center;justify-content:center;padding:0;border:0;border-radius:50%;background:transparent;box-shadow:none;transition:background .15s,transform .18s;cursor:pointer}
+#bibipop-demo .bp-bibi-choice:hover{background:var(--bibipop-mint);transform:translateY(-3px)}
+#bibipop-demo .bp-bibi-choice[aria-pressed=true]{background:var(--bibipop-mint)}
+#bibipop-demo .bp-bibi-choice:focus-visible{outline:2px dashed var(--bibipop-coral);outline-offset:1px}
+#bibipop-demo .bp-bibi-choice img{display:block;width:44px;height:44px;max-width:none;object-fit:contain;pointer-events:none}
+#bibipop-demo .bp-bibi-picker-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:600px){#bibipop-demo .bp-bibi-chooser,#bibipop-demo .bp-bibi-trigger{width:38px;height:38px;flex-basis:38px}#bibipop-demo .bp-bibi-choices{left:-124px}#bibipop-demo .bp-bibi-callout{width:120px;right:0;transform:scale(.85);transform-origin:top right}}
+@media(max-width:620px){#bibipop-demo .bp-bibi-callout{display:none}}
+@media(prefers-reduced-motion:reduce){#bibipop-demo .bp-bibi-trigger .bp-header-mascot,#bibipop-demo .bp-bibi-choice,#bibipop-demo .bp-bibi-callout{transition:none!important;transform:none!important}}
+
+@font-face{font-family:'Bibipop Handwriting';font-style:normal;font-weight:400 700;font-display:swap;src:url(assets/0bdb6b660482d31531b3.ttf) format('truetype')}
+/* Align the handwritten label's right centre with the arrow tail at y=47. */
+#bibipop-demo .bp-bibi-callout{display:flex;align-items:flex-end;gap:1px;width:max-content;height:60px;right:4px}
+#bibipop-demo .bp-bibi-callout>span{position:static;display:block;flex:none;left:auto;top:auto;margin:0;padding:0;font-family:'Bibipop Handwriting','Segoe Print',cursive!important;font-size:26px;font-weight:700;line-height:1;letter-spacing:0;white-space:nowrap;transform:rotate(-7deg);transform-origin:right center}
+#bibipop-demo .bp-bibi-callout svg{display:block;flex:0 0 64px;width:64px;height:60px;overflow:visible}
+@media(max-width:620px){#bibipop-demo .bp-bibi-callout{display:none}}
+
+/* A light handwritten invitation, composed around the mascot. */
+#bibipop-demo .bp-bibi-callout{top:100%;right:9px;height:44px;gap:6px;align-items:flex-end}
+#bibipop-demo .bp-bibi-callout>span{font-size:24px;font-weight:600;line-height:1;letter-spacing:.1px;transform:rotate(-2deg);transform-origin:right center}
+#bibipop-demo .bp-bibi-callout svg{width:44px;height:44px;flex-basis:44px}
+@media(max-width:620px){#bibipop-demo .bp-bibi-callout{display:none}}
 </style>
 <script>
 (()=>{
@@ -2533,26 +2584,135 @@ watch(document);
 })();</script>
 <script id="bibipop-readable-frame-type">(()=>{const css="@font-face{font-family:'Nunito';font-style:normal;font-weight:400;font-display:swap;src:url(assets/9ecbdba35fa74f10a1a9.ttf) format('truetype');}\n@font-face{font-family:'Nunito';font-style:normal;font-weight:600;font-display:swap;src:url(assets/1506fc96971e84d1a4ca.ttf) format('truetype');}\n@font-face{font-family:'Nunito';font-style:normal;font-weight:700;font-display:swap;src:url(assets/1a025dfce6e6e03bbe31.ttf) format('truetype');}\n@font-face{font-family:'Nunito';font-style:normal;font-weight:800;font-display:swap;src:url(assets/c5776505c7b3df3c3ca7.ttf) format('truetype');}\n@font-face{font-family:'Nunito';font-style:normal;font-weight:900;font-display:swap;src:url(assets/962e788cae550e6a3baf.ttf) format('truetype');unicode-range:U+20,U+30,U+32,U+36,U+42,U+47,U+61,U+64,U+65,U+69,U+6c,U+6e,U+72,U+73,U+75}\n@font-face{font-family:'Nunito';font-style:normal;font-weight:900;font-display:swap;src:url(assets/9b5f54104d8ddc8169ce.ttf) format('truetype');unicode-range:U+49,U+63,U+64,U+69,U+6e,U+6f,U+72,U+74,U+75}\n@font-face{font-family:'Nunito';font-style:normal;font-weight:900;font-display:swap;src:url(assets/eedab6b200ee1fe6a1c2.ttf) format('truetype');unicode-range:U+20,U+3a,U+42,U+43,U+44,U+48,U+4d,U+4f,U+50,U+53,U+56,U+61,U+63,U+64,U+65,U+66,U+67,U+68,U+69,U+6c,U+6d,U+6e,U+6f,U+72,U+73,U+74,U+75,U+76,U+77}\n@font-face{font-family:'Nunito';font-style:normal;font-weight:900;font-display:swap;src:url(assets/adaea94b397b24bc3560.ttf) format('truetype');unicode-range:U+20,U+42,U+4e,U+53,U+61,U+63,U+69,U+6b,U+6c,U+6d,U+6e,U+6f,U+72,U+74,U+75,U+79}\n@font-face{font-family:'Nunito';font-style:normal;font-weight:900;font-display:swap;src:url(assets/b3fd1bd925a61f10808f.ttf) format('truetype');unicode-range:U+20,U+4c,U+50,U+61,U+67,U+69,U+6d,U+6f,U+72,U+79}\n@font-face{font-family:'Nunito';font-style:normal;font-weight:900;font-display:swap;src:url(assets/0dcf388207620ad8d7c8.ttf) format('truetype');unicode-range:U+20,U+49,U+4c,U+63,U+67,U+6e,U+6f}\n@font-face{font-family:'Nunito';font-style:normal;font-weight:900;font-display:swap;src:url(assets/ae6c51ffdb16a398751d.ttf) format('truetype');unicode-range:U+20,U+43,U+53,U+61,U+63,U+64,U+65,U+69,U+6c,U+6e,U+70,U+72,U+7a}\n@font-face{font-family:'Nunito';font-style:normal;font-weight:900;font-display:swap;src:url(assets/99380d636cd15a248b4b.ttf) format('truetype');unicode-range:U+20,U+4c,U+4d,U+65,U+67,U+69,U+6f,U+73,U+75}\n@font-face{font-family:'Nunito';font-style:normal;font-weight:900;font-display:swap;src:url(assets/0710ebb3834c9154fec9.ttf) format('truetype');unicode-range:U+20,U+41,U+42,U+43,U+44,U+45,U+46,U+47,U+48,U+49,U+4a,U+4b,U+4c,U+4d,U+4e,U+4f,U+50,U+51,U+52,U+53,U+54,U+55,U+56,U+57,U+58,U+59,U+5a,U+61,U+62,U+63,U+64,U+65,U+66,U+67,U+68,U+69,U+6a,U+6b,U+6c,U+6d,U+6e,U+6f,U+70,U+71,U+72,U+73,U+74,U+75,U+76,U+77,U+78,U+79,U+7a}\n@font-face{font-family:'Nunito';font-style:normal;font-weight:900;font-display:swap;src:url(assets/0a0ae21ca0273eb05ff2.ttf) format('truetype');unicode-range:U+20,U+3a,U+42,U+4d,U+61,U+62,U+63,U+64,U+69,U+6e,U+6f,U+72,U+73,U+74}\n@font-face{font-family:'Nunito';font-style:normal;font-weight:900;font-display:swap;src:url(assets/b19b68d072a241c87a67.ttf) format('truetype');unicode-range:U+20,U+3a,U+41,U+42,U+45,U+4d,U+61,U+62,U+63,U+64,U+65,U+69,U+6e,U+6f,U+70,U+72,U+73,U+74,U+78}\n@font-face{font-family:'Nunito';font-style:normal;font-weight:900;font-display:swap;src:url(assets/0a0ae21ca0273eb05ff2.ttf) format('truetype');unicode-range:U+20,U+3a,U+42,U+4d,U+61,U+62,U+63,U+64,U+69,U+6e,U+6f,U+72,U+73,U+74}\n@font-face{font-family:'Nunito';font-style:normal;font-weight:900;font-display:swap;src:url(assets/f63d521ef7afe51d75ac.ttf) format('truetype');unicode-range:U+20,U+2c,U+42,U+44,U+53,U+54,U+56,U+57,U+61,U+62,U+63,U+64,U+65,U+66,U+68,U+69,U+6d,U+6e,U+6f,U+70,U+72,U+73,U+74,U+75,U+76,U+77,U+79,U+2019}\n@font-face{font-family:'Nunito';font-style:normal;font-weight:900;font-display:swap;src:url(assets/130245d4b34eca856412.ttf) format('truetype');unicode-range:U+20,U+2d,U+54,U+56,U+57,U+61,U+63,U+64,U+65,U+66,U+67,U+68,U+69,U+6c,U+6d,U+6e,U+6f,U+70,U+72,U+73,U+74,U+75,U+76,U+77,U+79}\n@font-face{font-family:'Nunito';font-style:normal;font-weight:900;font-display:swap;src:url(assets/2b6dc043071e9e6b856b.ttf) format('truetype');unicode-range:U+20,U+42,U+45,U+46,U+48,U+4d,U+50,U+53,U+54,U+56,U+57,U+61,U+62,U+63,U+64,U+65,U+66,U+67,U+68,U+69,U+6b,U+6c,U+6e,U+6f,U+70,U+72,U+73,U+74,U+75,U+77,U+78,U+79}\n@font-face{font-family:'Nunito';font-style:normal;font-weight:900;font-display:swap;src:url(assets/057d66cf7d59643914c1.ttf) format('truetype');unicode-range:U+50,U+61,U+63,U+67,U+69,U+6b,U+6e}\n@font-face{font-family:'Nunito';font-style:normal;font-weight:900;font-display:swap;src:url(assets/3c1070689024c08a1956.ttf) format('truetype');unicode-range:U+43,U+6c,U+6f,U+72,U+73,U+75}\n@font-face{font-family:'Nunito';font-style:normal;font-weight:900;font-display:swap;src:url(assets/3c1070689024c08a1956.ttf) format('truetype');unicode-range:U+43,U+6c,U+6f,U+72,U+73,U+75}\nhtml,body,body *{font-family:'Nunito',sans-serif!important}body,body :is(p,li,td,small,input,select){font-weight:700!important}body :is(h1,h2,h3,h4,h5,h6,button,summary,th,strong,b){font-weight:900!important}";function apply(frame){try{const d=frame.contentDocument;if(!d||!d.head||d.getElementById('bp-readable-type'))return;const s=d.createElement('style');s.id='bp-readable-type';s.textContent=css;d.head.append(s)}catch(e){}}document.addEventListener('load',e=>{if(e.target.tagName==='IFRAME')apply(e.target)},true);document.querySelectorAll('iframe').forEach(apply);new MutationObserver(records=>{for(const r of records)for(const n of r.addedNodes){if(n.nodeType!==1)continue;if(n.tagName==='IFRAME')apply(n);n.querySelectorAll?.('iframe').forEach(apply)}}).observe(document.body,{subtree:true,childList:true})})();</script><script id="bibipop-bibi-cursor">(()=>{
  const fine=matchMedia('(any-hover:hover) and (any-pointer:fine)'),root=document.documentElement;
- const marker=document.createElement('div');marker.id='bp-bibi-pointer';marker.setAttribute('aria-hidden','true');marker.setAttribute('popover','manual');marker.hidden=true;const art=document.createElement('img');art.src="assets/04bedc74937c4d6bec5e.png";art.alt='';art.draggable=false;marker.append(art);document.body.append(marker);
- const hasPopover=typeof marker.showPopover==='function';let visible=false,layer=null,lastX=0,lastY=0,hovered=null;
+ const colours=[{"id":"coral","label":"Coral","src":"assets/e18a5ae26b10aa9abe09.png","preview":"assets/49097bf78871de090f57.png"},{"id":"yellow","label":"Yellow","src":"assets/27a73748c67fd0db426b.png","preview":"assets/6977c0f6269284fbccc5.png"},{"id":"lilac","label":"Lilac","src":"assets/d0eec0d15470bb60ca61.png","preview":"assets/bb02c6ad550c3b95565d.png"},{"id":"green","label":"Green","src":"assets/6195eb4f0db32060b872.png","preview":"assets/80864097027e4d5c57e5.png"},{"id":"blue","label":"Blue","src":"assets/e0f662f14822ecabbbf3.png","preview":"assets/8accc07c5f40c080139a.png"}],nativeCSS="@media (any-hover:hover) and (any-pointer:fine){html,body,body *{cursor:var(--bp-bibi-native,auto)!important}body :is(input:not([type=button]):not([type=submit]):not([type=reset]):not([type=range]):not([type=checkbox]):not([type=radio]),textarea,[contenteditable=true],[contenteditable=\"\"]){cursor:text!important}body :is(:disabled,[aria-disabled=true]){cursor:not-allowed!important}}",storageKey='bibipop-cursor-colour';
+ let selected=colours[0];try{const saved=localStorage.getItem(storageKey);selected=colours.find(c=>c.id===saved)||selected}catch(e){}
+ const marker=document.createElement('div');marker.id='bp-bibi-pointer';marker.setAttribute('aria-hidden','true');marker.setAttribute('popover','manual');marker.hidden=true;
+ const art=document.createElement('img');art.src=selected.src;art.alt='';art.draggable=false;marker.append(art);document.body.append(marker);
+ const picker=document.querySelector('.bp-bibi-chooser'),trigger=picker.querySelector('.bp-bibi-trigger'),preview=trigger.querySelector('img'),popup=picker.querySelector('.bp-bibi-choices'),status=picker.querySelector('[role=status]'),choices=[];
+ function openPicker(focusChoice=false){popup.hidden=false;trigger.setAttribute('aria-expanded','true');picker.classList.add('is-open');if(focusChoice)(choices.find(b=>b.dataset.colour===selected.id)||choices[0]).focus({preventScroll:true})}
+ function closePicker(restoreFocus=false){popup.hidden=true;trigger.setAttribute('aria-expanded','false');picker.classList.remove('is-open');if(restoreFocus)trigger.focus({preventScroll:true})}
+ trigger.addEventListener('click',event=>{if(popup.hidden)openPicker(event.detail===0);else closePicker()});
+ for(const colour of colours){const button=document.createElement('button');button.type='button';button.className='bp-bibi-choice';button.dataset.colour=colour.id;button.setAttribute('aria-label',colour.label+' Bibi');button.setAttribute('aria-pressed','false');const image=document.createElement('img');image.src=colour.preview;image.alt='';image.width=44;image.height=44;image.draggable=false;button.append(image);button.addEventListener('click',()=>{applyColour(colour.id,true);closePicker(true)});choices.push(button);popup.append(button)}
+ document.addEventListener('pointerdown',event=>{if(!picker.contains(event.target))closePicker()},{capture:true,passive:true});
+ picker.addEventListener('focusout',event=>{if(event.relatedTarget&&!picker.contains(event.relatedTarget))closePicker()});
+ picker.addEventListener('keydown',event=>{if(event.key==='Escape'&&!popup.hidden){event.preventDefault();event.stopPropagation();closePicker(true);return}const arrows=['ArrowRight','ArrowLeft','ArrowDown','ArrowUp'];if(!arrows.includes(event.key)&&event.key!=='Home'&&event.key!=='End')return;if(popup.hidden){if(event.target===trigger&&arrows.includes(event.key)){event.preventDefault();openPicker(true)}return}event.preventDefault();let index=choices.indexOf(document.activeElement);if(event.key==='Home')index=0;else if(event.key==='End')index=choices.length-1;else index=(Math.max(0,index)+(event.key==='ArrowLeft'||event.key==='ArrowUp'?-1:1)+choices.length)%choices.length;choices[index].focus({preventScroll:true})});
+ const frameDocuments=new WeakSet();
+ function prepareFrame(frame){frame.addEventListener('pointerenter',hide);try{const doc=frame.contentDocument;if(!doc?.head)return;let style=doc.getElementById('bp-bibi-frame-cursor');if(!style){style=doc.createElement('style');style.id='bp-bibi-frame-cursor';style.textContent=nativeCSS;doc.head.append(style)}doc.documentElement.style.setProperty('--bp-bibi-native','url("'+selected.src+'") 6 6, auto');if(!frameDocuments.has(doc)){doc.addEventListener('pointermove',hide,{passive:true});frameDocuments.add(doc)}}catch(e){}}
+ function applyColour(id,persist=false){const colour=colours.find(c=>c.id===id);if(!colour)return;selected=colour;art.src=colour.src;preview.src=colour.preview;trigger.setAttribute('aria-label','Choose Bibi Cursor Colour. Current: '+colour.label);choices.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.colour===colour.id)));root.style.setProperty('--bp-bibi-native','url("'+colour.src+'") 6 6, auto');document.querySelectorAll('iframe').forEach(prepareFrame);if(persist){try{localStorage.setItem(storageKey,colour.id)}catch(e){}status.textContent=colour.label+' Bibi Cursor Selected'}}
+ const hasPopover=typeof marker.showPopover==='function';let visible=false,layer=null,hovered=null;
  function hide(){visible=false;hovered=null;root.classList.remove('bp-bibi-cursor-live');marker.classList.remove('is-visible','is-hover','is-pressed');if(hasPopover&&marker.matches(':popover-open'))marker.hidePopover();marker.hidden=true}
+ function bounce(){marker.classList.remove('is-hover');void art.offsetWidth;marker.classList.add('is-hover')}
  function move(event){
   if(event.pointerType&&event.pointerType!=='mouse'){hide();return}if(!fine.matches){hide();return}
   const target=event.target instanceof Element?event.target:null;
   if(!target||target.closest('iframe,input:not([type=button]):not([type=submit]):not([type=reset]):not([type=range]):not([type=checkbox]):not([type=radio]),textarea,[contenteditable=true],[contenteditable=""],:disabled,[aria-disabled=true]')){hide();return}
-  lastX=event.clientX;lastY=event.clientY;marker.style.transform='translate3d('+(lastX-6)+'px,'+(lastY-6)+'px,0)';
+  marker.style.transform='translate3d('+(event.clientX-6)+'px,'+(event.clientY-6)+'px,0)';
   const top=target.closest('dialog[open],[popover]');
   if(!visible||top!==layer){marker.hidden=false;if(hasPopover){if(marker.matches(':popover-open'))marker.hidePopover();try{marker.showPopover()}catch(e){hide();return}}layer=top;visible=true;marker.classList.add('is-visible');root.classList.add('bp-bibi-cursor-live')}
   const next=target.closest('button,a[href],summary,select,input[type=range],input[type=checkbox],input[type=radio],[role=button],.cursor-interaction,canvas');
-  if(next!==hovered){hovered=next;marker.classList.remove('is-hover');if(next){void art.offsetWidth;marker.classList.add('is-hover')}}
+  if(next!==hovered){hovered=next;marker.classList.remove('is-hover');if(next)bounce()}
  }
  window.addEventListener('pointermove',move,{passive:true});
  window.addEventListener('pointerdown',e=>{if(e.pointerType&&e.pointerType!=='mouse'){hide();return}if(e.target instanceof Element&&e.target.closest('select')){hide();return}if(visible)marker.classList.add('is-pressed')},{passive:true});
- window.addEventListener('pointerup',()=>marker.classList.remove('is-pressed'),{passive:true});
+ window.addEventListener('pointerup',()=>{if(!visible)return;marker.classList.remove('is-pressed');bounce()},{passive:true});
  window.addEventListener('pointercancel',hide);window.addEventListener('blur',hide);root.addEventListener('pointerleave',hide);document.addEventListener('visibilitychange',()=>{if(document.hidden)hide()});document.addEventListener('keydown',e=>{if(e.key==='Tab')hide()});fine.addEventListener('change',hide);
- // Embedded interactive views retain the native Bibi image without an overlay.
- const frameCSS="@media (any-hover:hover) and (any-pointer:fine){html,body,body *{cursor:url(\"assets/04bedc74937c4d6bec5e.png\") 6 6,auto!important}body :is(input:not([type=button]):not([type=submit]):not([type=reset]):not([type=range]):not([type=checkbox]):not([type=radio]),textarea,[contenteditable=true],[contenteditable=\"\"]){cursor:text!important}body :is(:disabled,[aria-disabled=true]){cursor:not-allowed!important}}";
- function prepareFrame(frame){frame.addEventListener('pointerenter',hide);try{const doc=frame.contentDocument;if(!doc?.head||doc.getElementById('bp-bibi-frame-cursor'))return;const style=doc.createElement('style');style.id='bp-bibi-frame-cursor';style.textContent=frameCSS;doc.head.append(style);doc.addEventListener('pointermove',hide,{passive:true})}catch(e){}}
- document.addEventListener('load',e=>{if(e.target.tagName==='IFRAME')prepareFrame(e.target)},true);document.querySelectorAll('iframe').forEach(prepareFrame);
+ document.addEventListener('load',e=>{if(e.target.tagName==='IFRAME')prepareFrame(e.target)},true);
  new MutationObserver(records=>{for(const r of records)for(const node of r.addedNodes){if(node.nodeType!==1)continue;if(node.tagName==='IFRAME')prepareFrame(node);node.querySelectorAll?.('iframe').forEach(prepareFrame)}}).observe(document.body,{childList:true,subtree:true});
-})();</script></body></html>
+ applyColour(selected.id);
+})();</script><!-- Bibipop callout handwriting font license
+Copyright 2014 The Caveat Project Authors (https://github.com/googlefonts/caveat)
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+
+
+-----------------------------------------------------------
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+-----------------------------------------------------------
+
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded, 
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.
+
+DEFINITIONS
+"Font Software" refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.
+
+"Reserved Font Name" refers to any names specified as such after the
+copyright statement(s).
+
+"Original Version" refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).
+
+"Modified Version" refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.
+
+"Author" refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.
+
+PERMISSION & CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:
+
+1) Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.
+
+2) Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.
+
+3) No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.
+
+4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.
+
+5) The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.
+
+TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.
+
+-->
+</body></html>
