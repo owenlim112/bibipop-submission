@@ -27,7 +27,7 @@
 <header><strong class="bp-logo" data-preserve-case><img class="bp-header-wordmark" src="assets/917c8cc4742b2453d92f.png" alt="Bibipop" width="1008" height="312"><img class="bp-header-mascot" src="assets/64ff1755262ad0ab3021.png" alt="" aria-hidden="true" width="630" height="598"></strong><span class="crumb" aria-live="polite">by Ang Bin Heng, Giselle Tan, Isabelle Tay, Owen Lim, Reimi Ho, Zhang Xintong</span><small class="capstone-credit">Our Capstone Project, With Love <span aria-hidden="true">&hearts;</span></small></header>
 <div class="stage"><div class="world"><svg class="world-trail" viewBox="0 0 1600 900" preserveAspectRatio="none" aria-hidden="true"><path d="M-80 670 C160 420 250 790 650 620 S1120 630 1670 450" fill="none" stroke="#e5cfb1" stroke-width="5" stroke-linecap="round" opacity=".45"/><path d="M600 -100 C710 180 1110 90 1350 310 S1530 600 1700 620" fill="none" stroke="#e3d8bf" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 14" opacity=".4"/></svg>
 <div class="intro"><span class="eyebrow">FROM INSIGHT TO EXPERIENCE</span><h1><span class="intro-line">A Little World.</span><span class="intro-line">A Bigger Idea.</span></h1><p>Meet the brand. Follow the thinking.<br>Step inside the experience.</p></div>
-<button class="object brand cursor-interaction" data-key="brand" type="button" aria-label="Enter the brand book"><span class="art book"><small>THE BRAND BOOK</small><b class="bp-book-logo" data-preserve-case><img src="assets/917c8cc4742b2453d92f.png" alt="Bibipop" width="1008" height="312"></b><i>✿</i><span>Small rituals.<br>Happy little humans.</span></span><span class="label">01 / Meet Bibipop <span>↗</span></span></button>
+<button class="object brand cursor-interaction" data-key="brand" type="button" aria-label="Enter the brand book"><img class="art brand-book-art" src="assets/fa019cf098b161cd36fa.png" alt="Bibipop ring-bound brand book with the official logo, Bibi mascot and pastel cover" width="1254" height="1254" draggable="false"><span class="label">01 / Meet Bibipop <span>↗</span></span></button>
 <button class="object strategy cursor-interaction" data-key="strategy" type="button" aria-label="Enter the strategy map"><img class="art strategy-map-art" src="assets/9f7eb64dc1c8ec199a31.png" alt="" width="1536" height="1024" draggable="false"><span class="label">02 / The strategy <span>↗</span></span></button>
 <button class="object subscription cursor-interaction" data-key="subscription" type="button" aria-label="Enter the subscription box"><span class="art box"><small>A LITTLE JOY, EVERY MONTH</small><b>bibipop</b><i>◡</i><span>THE EVERYDAY ADVENTURE BOX</span></span><span class="label">03 / The subscription <span>↗</span></span></button>
 <button class="object village cursor-interaction" data-key="village" type="button" aria-label="Enter Bibipop Village"><span class="art mini"><small>BIBIPOP VILLAGE</small><i class="stall a">CHARMS</i><i class="stall b">HALL</i><i class="stall c">GUMMIES</i><span class="square">Village Square</span></span><span class="label">04 / The launch <span>↗</span></span></button>
@@ -1449,6 +1449,12 @@ html.bp-bibi-cursor-live,html.bp-bibi-cursor-live body,html.bp-bibi-cursor-live 
 #bp-bibi-pointer.is-pressed img{animation:none;transform:scale(.9,1.04)}
 @keyframes bp-bibi-hover{0%,100%{transform:translateY(0)}45%{transform:translateY(-5px)}75%{transform:translateY(1px)}}
 @media(prefers-reduced-motion:reduce){#bp-bibi-pointer.is-hover img{animation:none}#bp-bibi-pointer.is-pressed img{transform:none}}
+
+/* Approved ring-bound brand book artwork replaces the CSS placeholder. */
+#bibipop-demo .world>.brand>.brand-book-art{display:block;width:100%;height:190px;object-fit:contain;object-position:center;border:0;border-radius:0;padding:0;background:transparent;box-shadow:none;rotate:0deg;filter:drop-shadow(3px 6px 6px #31574412)}
+@media(min-width:1000px){#bibipop-demo .world>.brand>.brand-book-art{height:240px}}
+@media(min-width:1000px) and (max-height:819px){#bibipop-demo .world>.brand>.brand-book-art{height:220px}}
+@media(max-width:620px){#bibipop-demo .world>.brand>.brand-book-art{height:150px}}
 </style>
 <script>
 (()=>{
