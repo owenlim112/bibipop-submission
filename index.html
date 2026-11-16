@@ -1522,6 +1522,16 @@ html.bp-bibi-cursor-live,html.bp-bibi-cursor-live body,html.bp-bibi-cursor-live 
 #bibipop-demo .village-introduction .village-passport-link{flex-shrink:0}
 @media(max-width:760px){#bibipop-demo .bp-mascot-layout{grid-template-columns:1fr;gap:26px}#bibipop-demo .bp-mascot-portrait{width:100%;max-width:520px;margin:0 auto}#bibipop-demo .bp-mascot-portrait img{max-height:480px}#bibipop-demo .village-introduction{flex-wrap:wrap}}
 </style>
+<style id="bibipop-smooth-spatial-navigation">
+#bibipop-demo .world{transition:none;will-change:auto}
+#bibipop-demo .detail{transition:none;transform-origin:50% 30%}
+#bibipop-demo.is-spatial-transition .world,#bibipop-demo.is-spatial-transition .detail{will-change:transform,opacity}
+#bibipop-demo.is-spatial-transition .stage:has(>.detail),#bibipop-demo.is-spatial-transition .stage:has(>.detail:not([hidden])){height:var(--spatial-stage-height)!important;min-height:0!important;overflow:hidden!important}
+#bibipop-demo.is-spatial-transition .detail:not([hidden]){position:absolute!important;inset:0!important}
+#bibipop-demo.is-spatial-transition>header,#bibipop-demo.is-spatial-transition:has(>.stage>.detail:not([hidden]))>header{height:var(--spatial-header-height);min-height:var(--spatial-header-height)}
+#bibipop-demo.is-spatial-transition .object{filter:none!important}
+#bibipop-demo.is-spatial-transition .art{transition:none!important;animation-play-state:paused!important}
+</style>
 <script>
 (()=>{
 const root=document.getElementById('bibipop-demo'),world=root.querySelector('.world'),stage=root.querySelector('.stage'),detail=root.querySelector('.detail');
@@ -2094,8 +2104,85 @@ function renderSubscriptionFeature(){
 
 let active=null,busy=false;const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches,pause=ms=>new Promise(r=>setTimeout(r,reduced?1:ms));
 function populate(key){renderFeature(key);const c=chapters[key];root.style.setProperty('--scene-color',c.color);detail.style.setProperty('--chapter',c.color);detail.querySelector('h2').textContent=c.title;detail.querySelector('.kicker').textContent=c.kicker;detail.querySelector('.lead').textContent=c.lead;detail.querySelector('.count').textContent=`${order.indexOf(key)+1} / 5`;detail.querySelector('.pieces').innerHTML=c.pieces.map(p=>`<div class="piece"><em>${p[0]}</em><b>${p[1]}</b><small>${p[2]}</small></div>`).join('');const tabs=detail.querySelector('.topics');tabs.replaceChildren();const customTopics=key==='village'||key==='strategy'||key==='subscription'||key==='brand';tabs.hidden=customTopics;detail.querySelector('.copy').hidden=customTopics;(customTopics?[]:c.tabs).forEach((t,i)=>{const b=document.createElement('button');b.type='button';b.className='cursor-interaction';b.textContent=t[0];b.setAttribute('aria-pressed',String(i===0));b.onclick=()=>{tabs.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');detail.querySelector('.copy').textContent=t[1]};tabs.append(b)});detail.querySelector('.copy').textContent=customTopics?'':c.tabs[0][1];detail.querySelector('.next').textContent=key==='strategy'?'See what families subscribe to →':key==='journey'?'Return to overview ↙':'Next chapter →';root.querySelector('.crumb').textContent=c.name;root.querySelector('.status').textContent='Inside the project · select a topic to explore';root.querySelector('.start').hidden=true;refineChapterLayout(key);}
-async function enter(key){if(busy||active)return;busy=true;active=key;root.scrollIntoView?.({block:'start',behavior:'auto'});const object=root.querySelector(`[data-key="${key}"]`),art=object.querySelector('.art'),r=art.getBoundingClientRect(),s=stage.getBoundingClientRect(),cx=r.left-s.left+r.width/2,cy=r.top-s.top+r.height/2,scale=Math.max(s.width/r.width,s.height/r.height)*1.35;object.style.pointerEvents='none';world.style.width=s.width+'px';world.style.height=s.height+'px';world.inert=true;world.style.transform=`translate(${s.width/2-scale*cx}px,${s.height/2-scale*cy}px) scale(${scale})`;populate(key);await pause(690);detail.hidden=false;await new Promise(requestAnimationFrame);detail.classList.add('visible');await pause(430);busy=false;detail.querySelector('.back').focus({preventScroll:true});if(key==='subscription')startSubscriptionOpening();}
-async function leave(){if(busy||!active)return;disposeVillage();disposeSubscription();busy=true;const key=active;detail.classList.remove('visible');await pause(240);detail.hidden=true;world.style.width='';world.style.height='';world.style.transform='none';await pause(1120);root.querySelectorAll('[data-key]').forEach(o=>o.style.pointerEvents='');world.inert=false;active=null;busy=false;root.querySelector('.crumb').textContent=overviewCredit;root.querySelector('.status').textContent='Explore freely, or follow the story.';root.querySelector('.start').hidden=false;root.querySelector(`[data-key="${key}"]`).focus({preventScroll:true});}
+let overviewGeometry=null,cameraTransform='translate3d(0,0,0) scale(1)',frozenArt=null;
+const spatialEase='cubic-bezier(.22,.61,.36,1)';
+const paintReady=()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+function spatialLock(geometry,headerHeight){
+ root.style.setProperty('--spatial-stage-height',geometry.height+'px');
+ root.style.setProperty('--spatial-header-height',headerHeight+'px');
+ root.classList.add('is-spatial-transition');
+}
+function spatialAnimate(element,frames,duration,delay=0){
+ return element.animate(frames,{duration:reduced?1:duration,delay:reduced?0:delay,easing:spatialEase,fill:'both'});
+}
+async function spatialFinish(animations){
+ await Promise.all(animations.map(animation=>animation.finished.catch(()=>{})));
+}
+async function enter(key){
+ if(busy||active||!chapters[key])return;
+ busy=true;active=key;
+ const object=root.querySelector(`[data-key="${key}"]`),art=object.querySelector('.art'),header=root.querySelector('header');
+ const scene=stage.getBoundingClientRect(),bounds=art.getBoundingClientRect(),headerStart=header.getBoundingClientRect().height;
+ overviewGeometry={width:scene.width,height:scene.height,header:headerStart};
+ const cx=bounds.left-scene.left+bounds.width/2,cy=bounds.top-scene.top+bounds.height/2;
+ const scale=Math.min(3.4,Math.max(2.1,Math.min(scene.width/bounds.width,scene.height/bounds.height)*.9));
+ cameraTransform=`translate3d(${scene.width/2-scale*cx}px,${scene.height*.47-scale*cy}px,0) scale(${scale})`;
+ const appearance=getComputedStyle(art);
+ frozenArt={element:art,rotate:art.style.rotate,translate:art.style.translate};
+ art.style.rotate=appearance.rotate;art.style.translate=appearance.translate;
+ world.style.width=scene.width+'px';world.style.height=scene.height+'px';world.inert=true;
+ // Build the destination before starting camera movement.
+ populate(key);
+ detail.hidden=false;detail.inert=true;detail.style.opacity='0';
+ const headerEnd=header.getBoundingClientRect().height;
+ spatialLock(overviewGeometry,headerStart);
+ await paintReady();
+ const animations=[
+  spatialAnimate(world,[{transform:'translate3d(0,0,0) scale(1)'},{transform:cameraTransform}],900),
+  spatialAnimate(world,[{opacity:1,offset:0},{opacity:1,offset:.3},{opacity:0,offset:1}],900),
+  spatialAnimate(detail,[{opacity:0,transform:'translate3d(0,18px,0) scale(.985)'},{opacity:1,transform:'translate3d(0,0,0) scale(1)'}],620,280),
+  spatialAnimate(header,[{height:headerStart+'px',minHeight:headerStart+'px'},{height:headerEnd+'px',minHeight:headerEnd+'px'}],900)
+ ];
+ await spatialFinish(animations);
+ world.style.transform=cameraTransform;world.style.opacity='0';world.style.visibility='hidden';
+ detail.classList.add('visible');detail.style.opacity='';detail.style.transform='';detail.inert=false;
+ root.classList.remove('is-spatial-transition');
+ animations.forEach(animation=>animation.cancel());
+ busy=false;
+ detail.querySelector('.back').focus({preventScroll:true});
+ if(key==='subscription')startSubscriptionOpening();
+}
+async function leave(){
+ if(busy||!active)return;
+ busy=true;
+ const key=active,header=root.querySelector('header'),headerStart=header.getBoundingClientRect().height;
+ const geometry=overviewGeometry||{width:stage.clientWidth,height:stage.clientHeight,header:headerStart};
+ detail.inert=true;
+ spatialLock(geometry,headerStart);
+ world.style.visibility='visible';
+ await paintReady();
+ const animations=[
+  spatialAnimate(world,[{transform:cameraTransform},{transform:'translate3d(0,0,0) scale(1)'}],820),
+  spatialAnimate(world,[{opacity:0},{opacity:1}],690,130),
+  spatialAnimate(detail,[{opacity:1,transform:'translate3d(0,0,0) scale(1)'},{opacity:0,transform:'translate3d(0,12px,0) scale(.99)'}],410),
+  spatialAnimate(header,[{height:headerStart+'px',minHeight:headerStart+'px'},{height:geometry.header+'px',minHeight:geometry.header+'px'}],820)
+ ];
+ await spatialFinish(animations);
+ detail.classList.remove('visible');detail.hidden=true;detail.inert=false;
+ world.style.transform='none';world.style.opacity='';world.style.visibility='';world.style.width='';world.style.height='';
+ root.classList.remove('is-spatial-transition');
+ animations.forEach(animation=>animation.cancel());
+ // Preserve the outgoing scene until its fade finishes.
+ disposeVillage();disposeSubscription();
+ if(frozenArt){frozenArt.element.style.rotate=frozenArt.rotate;frozenArt.element.style.translate=frozenArt.translate;frozenArt=null;}
+ root.querySelectorAll('[data-key]').forEach(object=>object.style.pointerEvents='');
+ world.inert=false;active=null;busy=false;
+ root.querySelector('.crumb').textContent=overviewCredit;
+ root.querySelector('.status').textContent='Explore freely, or follow the story.';
+ root.querySelector('.start').hidden=false;
+ root.querySelector(`[data-key="${key}"]`).focus({preventScroll:true});
+}
+
 root.querySelectorAll('[data-key]').forEach(b=>b.onclick=()=>enter(b.dataset.key));detail.querySelector('.back').onclick=leave;root.querySelector('.start').onclick=()=>enter('brand');detail.querySelector('.next').onclick=async()=>{if(busy)return;const next=order[order.indexOf(active)+1];await leave();if(next)await enter(next)};root.addEventListener('keydown',e=>{if(e.key==='Escape'&&active)leave()});
 })();
 </script>
