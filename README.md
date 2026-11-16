@@ -1,6 +1,7 @@
 # Bibipop · Capstone Website
 
 A static website for reviewing the Bibipop brand, go-to-market strategy, subscription experience, Village launch and consulting journey.
+https://owenlim112.github.io/bibipop-submission/ 
 
 ## Publish on GitHub Pages
 
