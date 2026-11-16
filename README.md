@@ -58,12 +58,6 @@ The Village section also explains the proposed visitor flow, manpower, capacity,
 
 A desktop browser is recommended for the full 3D experience. Responsive layouts are included for smaller screens.
 
-## Passport artwork
-
-[View all eight passport pages as one flat PNG](exports/Bibipop-Village-Passport-All-8-Pages.png).
-
-The export includes the cover, welcome page, village map, two stamp pages, Village Chief checkpoint, memories page and back cover.
-
 ## Built with
 
 The website uses **HTML, CSS and JavaScript**, with **Three.js/WebGL** for its 3D experiences. It is a static site hosted on **GitHub Pages**; no backend or build step is required to serve the prepared files.
