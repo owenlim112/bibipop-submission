@@ -12,17 +12,30 @@ Bibipop explores how a children's supplement brand can create value through the 
 
 The website brings our research, recommendations and prototypes into one place. It is designed as an explorable presentation, allowing viewers to follow the project story or jump directly into the ideas that interest them.
 
-## Explore the website
+## Project chapters
 
 The home screen contains five clickable objects. Each opens a different part of the project through a spatial zoom transition.
 
-| Section | What you can explore |
+| Chapter | What you can explore |
 | --- | --- |
 | **Meet Bibipop** | Brand positioning, visual identity, Bibi the mascot and the brand deck. |
 | **The Strategy** | Our go-to-market recommendations, organised around Product, Price, Place and Promotion. |
 | **The Subscription** | The proposed monthly experience, including the box, gummy refills, squishy bottle and parent–child activities. |
 | **The Launch** | Bibipop Village: the proposed pop-up campaign, booth experiences, visitor journey and operational planning. |
-| **Our Journey** | The research, design rationale and feasibility decisions behind the recommendations. |
+| **Our Journey** | The ideas we parked, the ambitions we adapted, and the experience we developed. Separate sections show the Montigo partnership idea and the decision to scale down the village. |
+
+## Our Journey: decisions behind the proposal
+
+This chapter makes our idea development and feasibility decisions visible. Each example has its own section, with **Peek at Our Thinking** presented openly alongside the concept and decision.
+
+| Section | Focus | Current content |
+| --- | --- | --- |
+| **01 / Montigo** | The collaboration we parked. | Why an established homegrown brand could help build credibility for Sisterhood, then a new and relatively unknown brand; the proposed personalised-bottle bundle; and concerns about partner interest, balanced power dynamics and bargaining power over costs, margins and pricing. |
+| **02 / The village** | Scaling the village down. | The original nine-area plan and revised four-booth concept, showing how budget, manpower and coordination shaped a more manageable launch while retaining the core family activities and passport journey. |
+| **03 / The subscription** | Subscription box development. | Text and design placeholders for the starting point, early ideas, developed concept, changes and reflections. Content is still to be developed. |
+| **04 / Thank you** | Team wrap-up. | The team photograph, with placeholders for the closing message and acknowledgements. Content is still to be developed. |
+
+The Montigo example focuses on **partnership feasibility**. The village example focuses on **operational scale and resources**. The subscription-development placeholders belong to Our Journey; the separate **The Subscription** chapter retains its existing product and experience content.
 
 ## Interactive features
 
@@ -88,7 +101,22 @@ Then open [http://localhost:8000](http://localhost:8000).
 
 When updating the hosted site, keep `index.html` at the repository root and preserve the `assets/` and `exports/` folder structures.
 
+## Update the Existing GitHub Pages Site
+
+1. Download and extract the ZIP. Use the extracted contents, not the ZIP itself.
+2. Open **GitHub Desktop** and select the existing **bibipop-submission** repository and **main** branch.
+3. Click **Fetch origin**, then **Pull origin** if offered, before copying your updates.
+4. Select **Repository → Show in Explorer** to open the cloned repository folder.
+5. Copy this package's **index.html**, complete **assets** and **exports** folders, **passport.html**, **README.md** and **.nojekyll** into that folder. Replace matching files and preserve the assets folder structure.
+6. Return to GitHub Desktop, enter a short update summary, click **Commit to main**, then **Push origin**.
+7. On GitHub, **Settings → Pages** should use **Deploy from a branch**, branch **main**, folder **/(root)**. Keep this setting for automatic updates. Free GitHub Pages hosting requires a public repository; the website is publicly accessible.
+8. Wait for deployment, then review **https://owenlim112.github.io/bibipop-submission/**. Publication can take up to 10 minutes. Use Ctrl+Shift+R to refresh an older cached version.
+
+For an initial setup, clone your existing GitHub repository with **File → Clone repository** in GitHub Desktop before following the steps above. There is no need to add a new local repository for each update.
+
 ## Project status
+
+The five-chapter structure is in place. Within **Our Journey**, the Montigo and village examples contain the current developed content; subscription box development and the thank-you message remain placeholders.
 
 This website is an academic concept demonstration. Product designs, subscription details, pricing, budgets and activation plans represent proposals for evaluation and further development.
 
