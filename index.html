@@ -1550,6 +1550,33 @@ html.bp-bibi-cursor-live,html.bp-bibi-cursor-live body,html.bp-bibi-cursor-live 
 #bibipop-demo .bp-bibi-callout svg{width:44px;height:44px;flex-basis:44px}
 @media(max-width:620px){#bibipop-demo .bp-bibi-callout{display:none}}
 
+/* Allow the home callout to sit below Bibi without covering the intro. */
+@media (max-width: 999px) {
+ #bibipop-demo:not(.is-spatial-transition):has(>.stage>.detail[hidden])>header {
+  height: auto;
+ }
+ #bibipop-demo:has(>.stage>.detail[hidden])>header .bp-logo {
+  padding-bottom: 44px;
+ }
+ #bibipop-demo:has(>.stage>.detail[hidden]) .bp-bibi-callout {
+  display: flex;
+ }
+}
+@media (max-width: 620px) {
+ #bibipop-demo:has(>.stage>.detail[hidden])>header .bp-logo {
+  padding-bottom: 35px;
+ }
+ #bibipop-demo:has(>.stage>.detail[hidden]) .bp-bibi-callout {
+  width: max-content;
+  height: 35px;
+  right: 7px;
+  gap: 4px;
+  transform: none;
+ }
+ #bibipop-demo .bp-bibi-callout>span { font-size: 20px; }
+ #bibipop-demo .bp-bibi-callout svg { width: 35px; height: 35px; flex-basis: 35px; }
+}
+
 /* Bibi's welcome at Village Square */
 #bibipop-demo .bp-village-mascot .village-page-heading{max-width:760px;margin-bottom:28px}
 #bibipop-demo .bp-mascot-layout{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);align-items:center;gap:clamp(24px,4vw,56px)}
