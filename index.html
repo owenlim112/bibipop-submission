@@ -153,7 +153,7 @@
 <div class="intro"><span class="eyebrow">FROM INSIGHT TO EXPERIENCE</span><h1><span class="intro-line">A Little World.</span><span class="intro-line">A Bigger Idea.</span></h1><p>Meet the brand. Follow the thinking.<br>Step inside the experience.</p><button type="button" class="bp-mobile-start">Follow the Project <span aria-hidden="true">→</span></button></div>
 <button class="object brand cursor-interaction" data-key="brand" type="button" aria-label="Enter the brand book"><img class="art brand-book-art" src="assets/preview-fa019cf098b161cd36fa.png" decoding="async" alt="bibipop! ring-bound brand book with the official logo, Bibi mascot and pastel cover" width="1254" height="1254" draggable="false"><span class="label">01 / Meet bibipop! <span>↗</span></span></button>
 <button class="object subscription cursor-interaction" data-key="subscription" type="button" aria-label="Enter the subscription box"><span class="art box"><small>A LITTLE JOY, EVERY MONTH</small><b>bibipop!</b><i>◡</i><span>THE EVERYDAY ADVENTURE BOX</span></span><span class="label">02 / Subscription Box <span>↗</span></span></button>
-<button class="object strategy cursor-interaction" data-key="strategy" type="button" aria-label="Enter GTM Strategy"><span class="art strategy-map-art gtm-map-art"><img src="assets/gtm-strategy-map.webp" decoding="async" alt="" width="900" height="600" draggable="false"></span><span class="label">03 / GTM Strategy <span>↗</span></span></button>
+<button class="object strategy cursor-interaction" data-key="strategy" type="button" aria-label="Enter GTM Strategy"><span class="art strategy-map-art gtm-map-art"><img class="gtm-map-base" src="assets/gtm-strategy-treasure-map.png" decoding="async" alt="" width="1536" height="1024" draggable="false"><img class="gtm-checkpoint-bibi" src="assets/passport-bibi-main-official.png" decoding="async" alt="" width="984" height="984" draggable="false"></span><span class="label">03 / GTM Strategy <span>↗</span></span></button>
 <button class="object marketing cursor-interaction" data-key="marketing" type="button" aria-label="Enter Marketing &amp; Communications"><span class="art marketing-art" aria-hidden="true"><img class="marketing-megaphone" src="assets/marketing-megaphone.webp" alt="" width="800" height="800" draggable="false"></span><span class="label">04 / Marketing &amp; Communications <span>↗</span></span></button>
 <button class="object village cursor-interaction" data-key="village" type="button" aria-label="Enter bibipop! Village"><span class="art mini"><small>bibipop! VILLAGE</small><i class="stall a">CHARMS</i><i class="stall b">HALL</i><i class="stall c">GUMMIES</i><span class="square">Village Square</span></span><span class="label">05 / bibipop! Village Launch <span>↗</span></span></button>
 <button class="object journey cursor-interaction" data-key="journey" type="button" aria-label="Enter our consulting journey"><img class="art journey-path-art" src="assets/preview-journey-path.png" decoding="async" alt="A winding pastel path from a lightbulb and idea sketch to a village booth and our team photo" width="1280" height="1280" draggable="false"><span class="label">06 / Our Journey <span>↗</span></span></button>
@@ -1905,9 +1905,9 @@ function foldSupportingNotes(scope){
 function foldStrategyEvidence(scope){
  improveReadability(scope);
  // The proposal and its reasoning remain visible; brand precedents are supplementary examples.
- for(const aside of scope.querySelectorAll('.strategy-precedent')){
-  const fold=document.createElement('details');fold.className='bp-fold bp-strategy-support';const summary=document.createElement('summary');summary.textContent=aside.querySelector('h4')?.textContent||'Brand example';fold.append(summary);
-  const body=document.createElement('div');body.className='bp-fold-body';aside.querySelector('h4')?.remove();while(aside.firstChild)body.append(aside.firstChild);fold.append(body);aside.replaceWith(fold);
+ for(const aside of scope.querySelectorAll('.strategy-evidence,.strategy-precedent')){
+  const fold=document.createElement('details');fold.className='bp-fold bp-strategy-support';const summary=document.createElement('summary');const precedent=aside.classList.contains('strategy-precedent');summary.textContent=precedent?(aside.querySelector('h4')?.textContent||'Brand example'):'Research insights';fold.append(summary);
+  const body=document.createElement('div');body.className='bp-fold-body';if(precedent)aside.querySelector('h4')?.remove();while(aside.firstChild)body.append(aside.firstChild);fold.append(body);aside.replaceWith(fold);
  }
 }
 function refineChapterLayout(key){
@@ -1943,7 +1943,7 @@ function renderStrategyFeature(view=0){
     <svg class="strategy-trail strategy-trail-compact" viewBox="0 0 400 240" preserveAspectRatio="none" aria-hidden="true">
       <path d="M100 38 C130 11 165 12 193 30 S254 64 300 38 C268 47 253 70 226 88 S215 126 177 133 S132 156 100 166 C150 134 164 190 206 178 S263 145 300 166"/>
     </svg>
-    <button class="strategy-pin cursor-interaction" type="button" data-strategy-section aria-expanded="true" aria-controls="strategy-panel-product"><span class="strategy-stop" aria-hidden="true"><img alt="" width="1254" height="1254" draggable="false" src="assets/3a5711634cab8a69e913.png"><span class="strategy-number">01</span></span><strong>Product</strong></button>
+    <button class="strategy-pin cursor-interaction" type="button" data-strategy-section aria-expanded="true" aria-controls="strategy-panel-product"><span class="strategy-stop" aria-hidden="true"><img alt="" width="1254" height="1254" draggable="false" src="assets/gtm-product-island-bibi.svg"><span class="strategy-number">01</span></span><strong>Product</strong></button>
     <button class="strategy-pin cursor-interaction" type="button" data-strategy-section aria-expanded="false" aria-controls="strategy-panel-promotion"><span class="strategy-stop" aria-hidden="true"><img alt="" width="1254" height="1254" draggable="false" src="assets/adc883465bbae58e3bff.png"><span class="strategy-number is-blue">02</span></span><strong>Promotion</strong></button>
     <button class="strategy-pin cursor-interaction" type="button" data-strategy-section aria-expanded="false" aria-controls="strategy-panel-place"><span class="strategy-stop" aria-hidden="true"><img alt="" width="1254" height="1254" draggable="false" src="assets/4d302871e6db4ca0cda8.png"><span class="strategy-number is-yellow">03</span></span><strong>Place</strong></button>
     <button class="strategy-pin cursor-interaction" type="button" data-strategy-section aria-expanded="false" aria-controls="strategy-panel-price"><span class="strategy-stop" aria-hidden="true"><img alt="" width="1254" height="1254" draggable="false" src="assets/474d0614a650efcafc8a.png"><span class="strategy-number is-lilac">04</span></span><strong>Price</strong></button>
@@ -4252,11 +4252,10 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
 }
 
 </style>
-<svg width="0" height="0" aria-hidden="true" style="position:absolute"><defs><clipPath id="gtm-map-silhouette" clipPathUnits="objectBoundingBox">
-<path d="M .115 .107 C .168 .061 .208 .094 .278 .12 C .341 .155 .395 .143 .438 .12 C .466 .105 .485 .096 .491 .142 C .499 .182 .506 .12 .531 .125 C .659 .148 .758 .09 .824 .09 C .875 .087 .913 .119 .909 .188 C .911 .237 .877 .275 .864 .32 C .844 .393 .861 .46 .882 .521 C .904 .575 .872 .588 .876 .611 C .899 .649 .907 .686 .897 .723 C .938 .752 .941 .823 .916 .872 C .887 .919 .845 .923 .8 .909 C .709 .91 .607 .887 .52 .9 C .48 .906 .481 .876 .462 .882 C .442 .905 .407 .906 .367 .904 C .282 .903 .208 .867 .168 .886 C .107 .924 .078 .907 .072 .86 C .06 .813 .087 .736 .091 .687 C .099 .621 .111 .571 .119 .541 C .132 .511 .106 .503 .104 .448 C .09 .365 .098 .332 .113 .299 C .069 .285 .059 .181 .115 .107 Z"/>
-</clipPath></defs></svg><style>
-#bibipop-demo .world .gtm-map-art { display:grid; place-items:center; filter:none; }
-#bibipop-demo .gtm-map-art img { position:absolute; inset:0; display:block; width:100%; height:100%; object-fit:fill; clip-path:url(#gtm-map-silhouette); }
+<style>
+#bibipop-demo .world .gtm-map-art { position:relative; display:block; width:100%; height:auto!important; aspect-ratio:3/2; overflow:visible; filter:none; }
+#bibipop-demo .gtm-map-art .gtm-map-base { position:absolute; inset:0; display:block; width:100%; height:100%; object-fit:contain; clip-path:none; }
+#bibipop-demo .gtm-map-art .gtm-checkpoint-bibi { position:absolute; inset:auto; left:22%; top:21%; display:block; width:18%; height:auto; object-fit:contain; clip-path:none; pointer-events:none; }
 </style><style>
 #bibipop-demo .activity-catalog-dialog-body .activity-theme-switch { margin:12px auto 0; display:block; }
 </style><style id="bp-integrated-visuals">
