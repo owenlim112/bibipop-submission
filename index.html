@@ -1905,9 +1905,9 @@ function foldSupportingNotes(scope){
 function foldStrategyEvidence(scope){
  improveReadability(scope);
  // The proposal and its reasoning remain visible; brand precedents are supplementary examples.
- for(const aside of scope.querySelectorAll('.strategy-precedent')){
-  const fold=document.createElement('details');fold.className='bp-fold bp-strategy-support';const summary=document.createElement('summary');summary.textContent=aside.querySelector('h4')?.textContent||'Brand example';fold.append(summary);
-  const body=document.createElement('div');body.className='bp-fold-body';aside.querySelector('h4')?.remove();while(aside.firstChild)body.append(aside.firstChild);fold.append(body);aside.replaceWith(fold);
+ for(const aside of scope.querySelectorAll('.strategy-evidence,.strategy-precedent')){
+  const fold=document.createElement('details');fold.className='bp-fold bp-strategy-support';const summary=document.createElement('summary');const precedent=aside.classList.contains('strategy-precedent');summary.textContent=precedent?(aside.querySelector('h4')?.textContent||'Brand example'):'Research insights';fold.append(summary);
+  const body=document.createElement('div');body.className='bp-fold-body';if(precedent)aside.querySelector('h4')?.remove();while(aside.firstChild)body.append(aside.firstChild);fold.append(body);aside.replaceWith(fold);
  }
 }
 function refineChapterLayout(key){
