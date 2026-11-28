@@ -16,7 +16,7 @@ Core recommendations remain visible. Supporting research insights, calculations 
 
 ### 1. Meet bibipop!
 
-[Explore chapter](https://owenlim112.github.io/bibipop-submission/#brand/0) · [Read chapter PDF](assets/bibipop-brand-guidelines.pdf)
+[Explore chapter](https://owenlim112.github.io/bibipop-submission/#brand/0) · [Read chapter PDF](https://owenlim112.github.io/bibipop-submission/assets/bibipop-brand-guidelines.pdf)
 
 Meet the brand and the two audiences it speaks to: parents looking for reassurance and children who want to take part in the daily routine.
 
@@ -26,18 +26,18 @@ Meet the brand and the two audiences it speaks to: parents looking for reassuran
 
 ### 2. Subscription Box
 
-[Explore chapter](https://owenlim112.github.io/bibipop-submission/#subscription/0) · [Read chapter PDF](assets/bibipop-subscription-box.pdf)
+[Explore chapter](https://owenlim112.github.io/bibipop-submission/#subscription/0) · [Read chapter PDF](https://owenlim112.github.io/bibipop-submission/assets/bibipop-subscription-box.pdf)
 
 A monthly gummy refill and changing family activity turn the subscription into a shared routine. The reusable squishy bottle gives children something they can personalise and keep using.
 
 - **Explore the Kit:** an expanded interactive space-themed box, a squeezeable 3D bottle and activity booklet, followed by the main bibipop! colour design and its top-down contents.
 - **Monthly additions:** 30-gummy refill pouches, first-month keychains, 12 activity ideas, examples and estimated cost ranges.
 - **Box planning:** packing workflows, in-house and part-time fulfilment options, capacity bands and labour assumptions.
-- **Print and assembly:** exterior and interior previews, a 200 × 130 × 50 mm box, A2 and tiled A4 printing, and assembly instructions. [Download the box template and guidelines](assets/box-dimensions-and-template.pdf).
+- **Print and assembly:** exterior and interior previews, a 200 × 130 × 50 mm box, A2 and tiled A4 printing, and assembly instructions. [Download the box template and guidelines](https://owenlim112.github.io/bibipop-submission/assets/box-dimensions-and-template.pdf).
 
 ### 3. GTM Strategy
 
-[Explore chapter](https://owenlim112.github.io/bibipop-submission/#strategy/0) · [Read chapter PDF](assets/bibipop-gtm-strategy-final.pdf)
+[Explore chapter](https://owenlim112.github.io/bibipop-submission/#strategy/0) · [Read chapter PDF](https://owenlim112.github.io/bibipop-submission/assets/bibipop-gtm-strategy-final.pdf)
 
 The 4Ps connect parent insights with decisions about the offer, how families discover it, where they can try or buy it, and what they pay.
 
@@ -49,7 +49,7 @@ The 4Ps connect parent insights with decisions about the offer, how families dis
 
 ### 4. Marketing & Communications
 
-[Explore chapter](https://owenlim112.github.io/bibipop-submission/#marketing/0) · [Read chapter PDF](assets/bibipop-marketing-communications.pdf)
+[Explore chapter](https://owenlim112.github.io/bibipop-submission/#marketing/0) · [Read chapter PDF](https://owenlim112.github.io/bibipop-submission/assets/bibipop-marketing-communications.pdf)
 
 Follow the communication plan from a parent's first encounter with bibipop! through product understanding, reassurance and purchase consideration.
 
@@ -60,7 +60,7 @@ Follow the communication plan from a parent's first encounter with bibipop! thro
 
 ### 5. bibipop! Village Launch
 
-[Explore chapter](https://owenlim112.github.io/bibipop-submission/#village/0) · [Read chapter PDF](assets/bibipop-village-launch.pdf)
+[Explore chapter](https://owenlim112.github.io/bibipop-submission/#village/0) · [Read chapter PDF](https://owenlim112.github.io/bibipop-submission/assets/bibipop-village-launch.pdf)
 
 A family pop-up introduces the brand through play, product discovery and conversations with parents. The four-booth layout shows how the experience could fit into a mall atrium.
 
@@ -71,7 +71,7 @@ A family pop-up introduces the brand through play, product discovery and convers
 
 ### 6. Our Journey
 
-[Explore chapter](https://owenlim112.github.io/bibipop-submission/#journey/0) · [Read chapter PDF](assets/bibipop-our-journey.pdf)
+[Explore chapter](https://owenlim112.github.io/bibipop-submission/#journey/0) · [Read chapter PDF](https://owenlim112.github.io/bibipop-submission/assets/bibipop-our-journey.pdf)
 
 Reflect on how we applied **#Empathy** and **#FeelAlive**, balancing ideas that excited us with what families would enjoy and Sisterhood could deliver.
 
@@ -93,7 +93,7 @@ The site uses **HTML, CSS and JavaScript**, with **Three.js/WebGL** for the 3D m
 | `README.md` | Chapter guide and PDF links |
 | `.nojekyll` | Serves the prepared files directly on GitHub Pages |
 
-All chapter PDF links above point to files included in this repository. Keep the `assets/` folder alongside `index.html` and `README.md` when copying or uploading the site.
+All chapter PDF links above open the files directly through GitHub Pages, bypassing the repository file preview. The PDFs are also included in this repository. Keep the `assets/` folder alongside `index.html` and `README.md` when copying or uploading the site.
 
 ### Run locally
 
