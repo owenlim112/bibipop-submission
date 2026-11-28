@@ -1,91 +1,119 @@
-# Bibipop · Little moments, big growing hearts
+# bibipop! · Little moments, big growing hearts
 
-Bibipop is our Singapore Management University capstone consulting project for Sisterhood. We proposed a children’s vitamin gummy brand built around a daily routine parents can feel confident about and children can help make their own. The website brings that proposal to life through brand artwork, a monthly subscription box, and a family pop-up launch.
+bibipop! is our Singapore Management University capstone consulting project for Sisterhood. We propose a children's vitamin gummy brand built around a daily routine parents can feel confident about and children can help make their own. This interactive project submission brings together the brand, subscription experience, go-to-market strategy, communications, launch campaign and our consulting journey.
 
-**[Explore the Bibipop website](https://owenlim112.github.io/bibipop-submission/)**
+**[Explore the bibipop! website](https://owenlim112.github.io/bibipop-submission/)**
 
-![Concept view of the four Bibipop Village booths](assets/village-concept-overview-2026.png)
+![Concept view of the four bibipop! Village booths](assets/village-concept-overview-2026.png)
 
-## Why we built this site
+## Exploring the project
 
-Our brief was to propose how Sisterhood could introduce Bibipop to families in Singapore and make the daily gummy routine something parents and children could share. We built the site so our client and assessors could see how the brand, subscription and launch work together, try the prototypes, and follow the decisions that shaped the proposal.
+Select any of the six illustrated objects to zoom into its chapter, or choose **Follow the Project** to read them in order. Within a chapter, use the section navigation and chapter selector to move around. **Overview** returns to the illustrated map.
 
-Each of the six illustrated objects on the overview zooms into a chapter. Choose **Follow the Project** to start with the brand and go through the chapters in order, or select the object you want to explore.
+Core recommendations remain visible. Supporting research insights, calculations and examples can be expanded where needed. Tables present costs, prices, scenarios and planning assumptions with exact figures. The site is a project submission and interactive prototype; subscriptions and event activities are proposals.
 
 ## The six chapters
 
 ### 1. Meet bibipop!
 
-We introduce the children’s vitamin gummy brand we proposed for Sisterhood and the two audiences it needs to speak to. Parents want clear, reassuring information about what they give their children, while children need a reason to take part in the daily routine. The chapter shows how the brand’s positioning, visual identity and tone of voice support both, with Bibi giving children a character they can recognise across the experience.
+[Explore chapter](https://owenlim112.github.io/bibipop-submission/#brand/0) · [Read chapter PDF](assets/bibipop-brand-guidelines.pdf)
 
-- **Visual identity** shows the colour palette, typography and logo in use.
-- **Voice & Bibi** introduces the mascot, its expressions and how the brand speaks to families. [Open the brand deck](assets/bibipop-brand-guidelines.pdf).
+Meet the brand and the two audiences it speaks to: parents looking for reassurance and children who want to take part in the daily routine.
+
+- **Brand foundations:** the brand story, purpose, positioning and personality.
+- **Visual identity:** the colour palette, typography, primary and icon logos, approved variations, clear space and usage guidance.
+- **Voice & Bibi:** the tone of voice, original mascot artwork, expressions and character variations used across the experience.
 
 ### 2. Subscription Box
 
-The subscription pairs a regular gummy refill with an activity families can do together. The reusable bottle becomes part of the daily routine, while the changing activity gives children something to look forward to when the box arrives. The chapter shows how the packaging, bottle and booklet work as a kit, and how the experience can feel familiar from month to month while still giving families something new to try.
+[Explore chapter](https://owenlim112.github.io/bibipop-submission/#subscription/0) · [Read chapter PDF](assets/bibipop-subscription-box.pdf)
 
-- **Interactive space-themed box** appears first and stays expanded for easy exploration. The coral design and its top-down contents appear below.
-- **Squishy bottle and activity booklet** let you squeeze the bottle and take a closer look at the booklet. Explore the Kit shows the coral design from two angles.
+A monthly gummy refill and changing family activity turn the subscription into a shared routine. The reusable squishy bottle gives children something they can personalise and keep using.
 
-- **Box dimensions and printable guidelines** include the 13-page coral template: 200 × 130 × 50 mm assembled, with A2 or four-sheet A4 long-edge duplex printing, exterior/interior previews and assembly instructions.
-
-- **Subscription planning** explains 30-gummy monthly pouches, first-month keychains, 12 activity ideas and cost ranges, and in-house versus part-time fulfilment at 125–250, 250–800 and 800–2,000 units per month.
+- **Explore the Kit:** an expanded interactive space-themed box, a squeezeable 3D bottle and activity booklet, followed by the main bibipop! colour design and its top-down contents.
+- **Monthly additions:** 30-gummy refill pouches, first-month keychains, 12 activity ideas, examples and estimated cost ranges.
+- **Box planning:** packing workflows, in-house and part-time fulfilment options, capacity bands and labour assumptions.
+- **Print and assembly:** exterior and interior previews, a 200 × 130 × 50 mm box, A2 and tiled A4 printing, and assembly instructions. [Download the box template and guidelines](assets/box-dimensions-and-template.pdf).
 
 ### 3. GTM Strategy
 
-This chapter explains how we would bring Bibipop to market in Singapore. It connects what we learnt about parents and the category to decisions about what the subscription offers, how families first hear about Bibipop, where they can try or buy it, and how the offer is positioned. Together, these decisions show how the brand could build trust before a first purchase and give families a reason to keep using it.
+[Explore chapter](https://owenlim112.github.io/bibipop-submission/#strategy/0) · [Read chapter PDF](assets/bibipop-gtm-strategy-final.pdf)
 
-- **Interactive 4Ps map** lets you select a stop to explore Product, Promotion, Place or Price.
-- **Research behind the recommendations** shows what informed the decisions and how the four parts of the strategy fit together.
+The 4Ps connect parent insights with decisions about the offer, how families discover it, where they can try or buy it, and what they pay.
+
+- **Interactive 4Ps map:** select Product, Promotion, Place or Price. Original Bibi artwork identifies the Product island and the first checkpoint on the overview's treasure map.
+- **Product and trust:** positioning, differentiation, clear product information and an experience children can take part in.
+- **Promotion and Place:** parent creators, professional expertise, educational content, direct customer relationships and opportunities to experience the product.
+- **Price and viability:** subscription plans, selling prices, contribution margins, revenue scenarios and monthly and annualised volumes, presented in tables with assumptions.
+- **Parent research:** expandable insights explain the reasoning behind each recommendation and the questions that still need validation.
 
 ### 4. Marketing & Communications
 
-Follow the campaign from a parent’s first encounter with Bibipop to the point where they might consider a trial or subscription. The chapter shows what the brand would say at different stages, from introducing the daily ritual to answering questions and showing how the kit works at home. It also explains how the team would coordinate the launch and keep communicating with families throughout the year.
+[Explore chapter](https://owenlim112.github.io/bibipop-submission/#marketing/0) · [Read chapter PDF](assets/bibipop-marketing-communications.pdf)
 
-- **Customer journey and campaign examples** show the messages families would encounter, with sample content and creator profiles.
-- **Switchable calendars** let you look through the 12-week launch plan and the one-year organic content and paid media schedules.
+Follow the communication plan from a parent's first encounter with bibipop! through product understanding, reassurance and purchase consideration.
+
+- **Audience and objectives:** the target parent segment, communication needs and measurable objectives.
+- **Content pillars:** Little Everyday Moments, What's Inside, and Parents Ask, We Answer, with topics and suitable formats.
+- **Channel execution:** social and digital content, KOL and parent-creator profiles, paid media and campaign mockups.
+- **Calendars and measurement:** the 12-week launch plan, annual organic and paid media schedules, and funnel KPIs.
 
 ### 5. bibipop! Village Launch
 
-Bibipop Village is our proposed family pop-up launch. Families start at Village Square, customise a charm at Charm Market, sample gummies at Gummy Shop and ask questions at Village Hall. Children collect stamps along the way and can earn the Village Chief badge. The chapter also shows how the four booths could fit into a mall atrium and how their layout supports a visit that combines play, product discovery and conversations with parents.
+[Explore chapter](https://owenlim112.github.io/bibipop-submission/#village/0) · [Read chapter PDF](assets/bibipop-village-launch.pdf)
 
-- **Village Explorer** lets you select each booth, see its design and understand what happens there.
-- **Flip-through Village Passport** lets you turn the illustrated pages, follow the booth route and see how the stamps lead to the Village Chief badge.
+A family pop-up introduces the brand through play, product discovery and conversations with parents. The four-booth layout shows how the experience could fit into a mall atrium.
+
+- **Village Explorer:** visit Village Square, Charm Market, Gummy Shop and Village Hall to see each booth's design, purpose and activities.
+- **Interactive Village Passport:** flip through the illustrated pages, follow the booth route, collect stamps and discover the Village Chief completion badge.
+- **Campaign Marketing:** a dedicated four-week plan with weekly calls to action, deliverables, event-day content, a channel schedule and a S$7,500 marketing allocation.
+- **Operations and costings:** setup, staffing, consumables, variable costs, offers and financial assumptions. Budget notes identify overlapping allowances and items that need reconciliation before spending.
 
 ### 6. Our Journey
 
-This chapter reflects on applying #Empathy and #FeelAlive as we developed bibipop!. Each story explains what excited us, how we imagined it working, what made us pause and where we landed: parking the Montigo-dependent collaboration, scaling the Village from nine areas to four booths, and turning messy subscription ideation into a practical box-making, costing and fulfilment guide. It preserves our initial mockups and the thinking behind the recommendations.
+[Explore chapter](https://owenlim112.github.io/bibipop-submission/#journey/0) · [Read chapter PDF](assets/bibipop-our-journey.pdf)
 
-- **Peek at Our Thinking** shows the questions and trade-offs we considered as the ideas developed.
-- **Concept comparisons and early mockups** show the Village before and after the redesign, along with early subscription box designs.
+Reflect on how we applied **#Empathy** and **#FeelAlive**, balancing ideas that excited us with what families would enjoy and Sisterhood could deliver.
 
-## Run locally
+- **Montigo collaboration:** the partnership idea, proposed responsibilities and why the concept was parked.
+- **Village development:** the move from nine areas to four booths, with concept comparisons and the reasoning behind the simpler layout.
+- **Subscription development:** early mockups and the progression from activity ideas to box design, costing, packing and fulfilment.
+- **Peek at Our Thinking:** the questions, constraints and trade-offs behind the recommendations, followed by the team's closing reflection and thanks.
 
-The site uses **HTML, CSS, and JavaScript**, with **Three.js/WebGL** for the 3D models. A desktop browser is best for the full 3D experience. The site also adapts to smaller screens.
+## Using the site
+
+The site uses **HTML, CSS and JavaScript**, with **Three.js/WebGL** for the 3D models. A desktop browser provides the fullest interactive experience. Responsive layouts support smaller screens, and keyboard focus, labelled controls, reduced-motion support and scrollable tables help make the submission easier to navigate.
 
 | File or folder | Purpose |
 | --- | --- |
-| `index.html` | Main interactive site |
-| `assets/` | Artwork, fonts, textures, and supporting documents |
+| `index.html` | Main interactive submission |
+| `assets/` | Artwork, fonts, 3D resources, six chapter PDFs and box-printing guidelines |
 | `exports/` | Flat passport artwork |
 | `passport.html` | Standalone interactive passport |
+| `README.md` | Chapter guide and PDF links |
 | `.nojekyll` | Serves the prepared files directly on GitHub Pages |
 
-Run this command from the repository root, then open [localhost:8000](http://localhost:8000).
+All chapter PDF links above point to files included in this repository. Keep the `assets/` folder alongside `index.html` and `README.md` when copying or uploading the site.
+
+### Run locally
+
+From the repository root, run:
 
 ```bash
 python -m http.server 8000
 ```
 
-## Update GitHub Pages
+Then open [localhost:8000](http://localhost:8000).
 
-1. Extract the GitHub Pages ZIP. In GitHub Desktop, select the existing `bibipop-submission` repository on `main`, then fetch and pull any updates.
-2. Copy the extracted contents into the repository root, including `.nojekyll`. Preserve the `assets/` and `exports/` folder structure.
-3. Commit and push to `main`. In **Settings → Pages**, use **Deploy from a branch** with `main` and `/(root)`. Check the [published site](https://owenlim112.github.io/bibipop-submission/) after deployment.
+### Publish to GitHub Pages
 
-## Project status and credits
+1. Extract the GitHub Pages ZIP. In GitHub Desktop, select the existing `bibipop-submission` repository on `main`, then fetch and pull.
+2. Copy the extracted contents into the repository root, including `.nojekyll`, while preserving the `assets/` and `exports/` folders.
+3. Commit and push to `main`. In **Settings → Pages**, select **Deploy from a branch**, `main` and `/(root)`.
+4. Check the [published site](https://owenlim112.github.io/bibipop-submission/) and chapter PDF links after deployment.
 
-Created by **Ang Bin Heng, Giselle Tan, Isabelle Tay, Owen Lim, Reimi Ho, and Zhang Xintong** for our Singapore Management University capstone project.
+## Team and credits
+
+Created by **Ang Bin Heng, Giselle Tan, Isabelle Tay, Owen Lim, Reimi Ho and Zhang Xintong** for our Singapore Management University capstone project.
 
 *Our Capstone Project, With Love ♥*
